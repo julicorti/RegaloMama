@@ -1,0 +1,113 @@
+.contenedor {
+  height: 98.3vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../image/img-2.jpeg);
+  object-fit: cover;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  /*   flex-direction: column; */
+}
+
+.contenedor::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+
+  backdrop-filter: blur(4px);
+}
+.contenedor-cora {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.contenedor-cora h1 {
+  font-family: Brush Script MT;
+  font-size: 100px;
+}
+.corazon {
+  animation: animate 0.6s linear infinite;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: #ff4757;
+  transform: rotate(-45deg);
+  box-shadow: -10px -10px 90px #ff4757;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+.corazon::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background-color: #ff4757;
+  border-radius: 50%;
+}
+.corazon::after {
+  content: "";
+  position: absolute;
+  right: -50%;
+  width: 70px;
+  height: 70px;
+  background-color: #ff4757;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 414px) {
+  .contenedor {
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  .contenedor-cora h1 {
+    font-size: 55px;
+  }
+  .corazon {
+    animation: animate 0.6s linear infinite;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px -10px 90px #ff4757;
+  }
+  .corazon::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 50px;
+    height: 50px;
+    background-color: #ff4757;
+    border-radius: 50%;
+  }
+  .corazon::after {
+    content: "";
+    position: absolute;
+    right: -50%;
+    width: 50px;
+    height: 50px;
+    background-color: #ff4757;
+    border-radius: 50%;
+  }
+ 
+
+}
+#video{
+  height: 10px;
+}
